@@ -124,11 +124,11 @@ export const useItemsStore = defineStore('itemsStore', {
   getters: {
     sortedByPrice() {
       if (this.orderBy === 'ascending') {
-        return this.items.toSorted(
+        return [...this.items].sort(
           (a, b) => a.price.current_price - b.price.current_price
         );
       } else if (this.orderBy === 'descending') {
-        return this.items.toSorted(
+        return [...this.items].sort(
           (a, b) => b.price.current_price - a.price.current_price
         );
       } else {
