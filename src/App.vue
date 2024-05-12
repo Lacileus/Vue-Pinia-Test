@@ -111,8 +111,7 @@ const handleFilterSelect = (event) => {
 .container {
   max-width: 1488px;
   margin: auto;
-  padding-top: 32px;
-  padding-bottom: 103px;
+  padding: 32px 16px 103px;
 }
 
 .header__navbar {
@@ -210,4 +209,11 @@ const handleFilterSelect = (event) => {
     gap: 16px;
   }
 }
+
+@media (max-width: 640px) {
+  .header__navbar__list {
+    flex-direction: column;
+  }
+}
+  
 </style>
